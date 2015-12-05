@@ -1,0 +1,106 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myTaskLabel" translate="myTasksApp.task.home.createOrEditLabel">Create or edit a Task</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="task.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="task.name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.creationDate" for="field_creationDate">CreationDate</label>
+            <input type="date" class="form-control" name="creationDate" id="field_creationDate"
+                    ng-model="task.creationDate"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.lastEditDate" for="field_lastEditDate">LastEditDate</label>
+            <input type="date" class="form-control" name="lastEditDate" id="field_lastEditDate"
+                    ng-model="task.lastEditDate"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.finishDate" for="field_finishDate">FinishDate</label>
+            <input type="date" class="form-control" name="finishDate" id="field_finishDate"
+                    ng-model="task.finishDate"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.priority" for="field_priority">Priority</label>
+            <select class="form-control" name="priority" ng-model="task.priority" id="field_priority">
+                <option value="LOW" translate="myTasksApp.TaskPriority.LOW">LOW</option>
+                <option value="MEDIUM" translate="myTasksApp.TaskPriority.MEDIUM">MEDIUM</option>
+                <option value="HIGH" translate="myTasksApp.TaskPriority.HIGH">HIGH</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.complexity" for="field_complexity">Complexity</label>
+            <select class="form-control" name="complexity" ng-model="task.complexity" id="field_complexity">
+                <option value="EASY" translate="myTasksApp.TaskComplexity.EASY">EASY</option>
+                <option value="MEDIUM" translate="myTasksApp.TaskComplexity.MEDIUM">MEDIUM</option>
+                <option value="DIFFICULT" translate="myTasksApp.TaskComplexity.DIFFICULT">DIFFICULT</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.state" for="field_state">State</label>
+            <select class="form-control" name="state" ng-model="task.state" id="field_state">
+                <option value="OPEN" translate="myTasksApp.TaskState.OPEN">OPEN</option>
+                <option value="PENDING" translate="myTasksApp.TaskState.PENDING">PENDING</option>
+                <option value="PAUSED" translate="myTasksApp.TaskState.PAUSED">PAUSED</option>
+                <option value="FINISHED" translate="myTasksApp.TaskState.FINISHED">FINISHED</option>
+                <option value="CLOSED" translate="myTasksApp.TaskState.CLOSED">CLOSED</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.estimatedTime" for="field_estimatedTime">EstimatedTime</label>
+            <input type="number" class="form-control" name="estimatedTime" id="field_estimatedTime"
+                    ng-model="task.estimatedTime"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="task.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="myTasksApp.task.comment" for="field_comment">Comment</label>
+            <input type="text" class="form-control" name="comment" id="field_comment"
+                    ng-model="task.comment"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="myTasksApp.task.location" for="field_location">location</label>
+            <select class="form-control" id="field_location" name="location" ng-model="task.locationId" ng-options="location.id as location.name for location in locations">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="myTasksApp.task.user" for="field_user">user</label>
+            <select class="form-control" id="field_user" name="user" ng-model="task.userId" ng-options="user.id as user.id for user in users">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

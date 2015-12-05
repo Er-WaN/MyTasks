@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="myTasksApp.tool.detail.title">Tool</span> {{tool.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.tool.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{tool.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.tool.toBuy">ToBuy</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{tool.toBuy}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.tool.price">Price</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{tool.price}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.tool.number">Number</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{tool.number}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.tool.comment">Comment</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{tool.comment}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.tool.task">task</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="task.detail({id:tool.taskId})">{{tool.taskName}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

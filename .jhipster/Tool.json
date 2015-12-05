@@ -1,0 +1,41 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "task",
+      "otherEntityName": "task",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "name"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "toBuy",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "price",
+      "fieldType": "Float"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "number",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "comment",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20151205145658",
+  "dto": "mapstruct",
+  "pagination": "no"
+}

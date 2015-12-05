@@ -1,0 +1,60 @@
+<div>
+    <h2 translate="myTasksApp.tool.home.title">Tools</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="tool.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="myTasksApp.tool.home.createLabel">Create a new Tool</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="myTasksApp.tool.name">Name</span></th>
+                    <th><span translate="myTasksApp.tool.toBuy">ToBuy</span></th>
+                    <th><span translate="myTasksApp.tool.price">Price</span></th>
+                    <th><span translate="myTasksApp.tool.number">Number</span></th>
+                    <th><span translate="myTasksApp.tool.comment">Comment</span></th>
+                    <th><span translate="myTasksApp.tool.task">task</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tool in tools track by tool.id">
+                    <td><a ui-sref="tool.detail({id:tool.id})">{{tool.id}}</a></td>
+                    <td>{{tool.name}}</td>
+                    <td>{{tool.toBuy}}</td>
+                    <td>{{tool.price}}</td>
+                    <td>{{tool.number}}</td>
+                    <td>{{tool.comment}}</td>
+                    <td>
+                        <a ui-sref="task.detail({id:tool.taskId})">{{tool.taskName}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="tool.detail({id:tool.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="tool.edit({id:tool.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="tool.delete({id:tool.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

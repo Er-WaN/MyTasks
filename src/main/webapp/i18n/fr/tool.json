@@ -1,0 +1,27 @@
+{
+    "myTasksApp": {
+        "tool" : {
+            "home": {
+                "title": "Tools",
+                "createLabel": "Créer un nouveau Tool",
+                "createOrEditLabel": "Créer ou éditer un Tool"
+            },
+            "created": "Un nouveau Tool a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Tool avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Tool avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Tool {{ id }} ?"
+            },
+            "detail": {
+                "title": "Tool"
+            },
+            "name": "Name",
+            "toBuy": "ToBuy",
+            "price": "Price",
+            "number": "Number",
+            "comment": "Comment",
+            "task": "Task"
+        }
+    }
+}
+

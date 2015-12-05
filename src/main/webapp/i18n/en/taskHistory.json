@@ -1,0 +1,25 @@
+{
+    "myTasksApp": {
+        "taskHistory" : {
+            "home": {
+                "title": "TaskHistorys",
+                "createLabel": "Create a new TaskHistory",
+                "createOrEditLabel": "Create or edit a TaskHistory"
+            },
+            "created": "A new TaskHistory is created with identifier {{ param }}",
+            "updated": "A TaskHistory is updated with identifier {{ param }}",
+            "deleted": "A TaskHistory is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete TaskHistory {{ id }}?"
+            },
+            "detail": {
+                "title": "TaskHistory"
+            },
+            "action": "Action",
+            "date": "Date",
+            "comment": "Comment",
+            "spentTime": "SpentTime",
+            "task": "Task"
+        }
+    }
+}

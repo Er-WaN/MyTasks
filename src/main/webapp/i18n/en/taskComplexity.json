@@ -1,0 +1,10 @@
+{
+    "myTasksApp": {
+        "TaskComplexity" : {
+            "null": "",
+            "EASY": "EASY",
+            "MEDIUM": "MEDIUM",
+            "DIFFICULT": "DIFFICULT"
+        }
+    }
+}

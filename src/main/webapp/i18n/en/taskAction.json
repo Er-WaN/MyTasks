@@ -1,0 +1,12 @@
+{
+    "myTasksApp": {
+        "TaskAction" : {
+            "null": "",
+            "CREATE": "CREATE",
+            "EDIT": "EDIT",
+            "PAUSE": "PAUSE",
+            "DELETE": "DELETE",
+            "FINISH": "FINISH"
+        }
+    }
+}

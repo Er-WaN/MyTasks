@@ -1,0 +1,118 @@
+
+<div>
+    <h2><span translate="myTasksApp.task.detail.title">Task</span> {{task.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{task.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.creationDate">CreationDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{task.creationDate | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.lastEditDate">LastEditDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{task.lastEditDate | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.finishDate">FinishDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{task.finishDate | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.priority">Priority</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'myTasksApp.TaskPriority.' + task.priority}}">{{task.priority}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.complexity">Complexity</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'myTasksApp.TaskComplexity.' + task.complexity}}">{{task.complexity}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.state">State</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'myTasksApp.TaskState.' + task.state}}">{{task.state}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.estimatedTime">EstimatedTime</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{task.estimatedTime}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{task.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.comment">Comment</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{task.comment}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.location">location</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="location.detail({id:task.locationId})">{{task.locationName}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="myTasksApp.task.user">user</span>
+                </td>
+                <td>
+                    {{task.userId}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

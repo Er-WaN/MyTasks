@@ -1,0 +1,32 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "task",
+      "otherEntityName": "task",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "location",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "outdoor",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "floor",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20151205145658",
+  "dto": "mapstruct",
+  "pagination": "no"
+}

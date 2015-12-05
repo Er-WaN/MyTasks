@@ -1,0 +1,37 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "task",
+      "otherEntityName": "task",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "action",
+      "fieldType": "TaskAction",
+      "fieldValues": "CREATE,EDIT,PAUSE,DELETE,FINISH"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "spentTime",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20151205145658",
+  "dto": "mapstruct",
+  "pagination": "no"
+}

@@ -1,0 +1,90 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "tools",
+      "otherEntityName": "tool",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "task"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "location",
+      "otherEntityName": "location",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "histories",
+      "otherEntityName": "taskHistory",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "task"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "user",
+      "otherEntityName": "user",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "creationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "lastEditDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "finishDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "priority",
+      "fieldType": "TaskPriority",
+      "fieldValues": "LOW,MEDIUM,HIGH"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "complexity",
+      "fieldType": "TaskComplexity",
+      "fieldValues": "EASY,MEDIUM,DIFFICULT"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "state",
+      "fieldType": "TaskState",
+      "fieldValues": "OPEN,PENDING,PAUSED,FINISHED,CLOSED"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "estimatedTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "comment",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20151205145658",
+  "dto": "mapstruct",
+  "pagination": "no"
+}
