@@ -27,13 +27,13 @@ spring:
     social:
         # see https://developers.google.com/+/web/signin/server-side-flow#step_1_create_a_client_id_and_client_secret
         google:
-            clientId: xxx
-            clientSecret: xxx
+            clientId: 866190611225-ahvtcaadq7767tfa0vocron7hq7jj1dn.apps.googleusercontent.com
+            clientSecret: un0N_ysic0kZ1PKQjKf-Rk7v
 
         # see https://developers.facebook.com/docs/facebook-login/v2.2
         facebook:
-            clientId: xxx
-            clientSecret: xxx
+            clientId: 171969729822456
+            clientSecret: 499190892b43bba80ada4fd0dc3a35a2
 
         # see https://apps.twitter.com/app/
         twitter:
