@@ -2,33 +2,33 @@
     "myTasksApp": {
         "task" : {
             "home": {
-                "title": "Tasks",
-                "createLabel": "Créer un nouveau Task",
-                "createOrEditLabel": "Créer ou éditer un Task"
+                "title": "Tache",
+                "createLabel": "Créer une nouvelle tache",
+                "createOrEditLabel": "Créer ou éditer une tache"
             },
-            "created": "Un nouveau Task a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Task avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Task avec l'identifiant {{ param }} a été supprimé",
+            "created": "Une nouvelle tache a été créé avec le nom {{ param }}",
+            "updated": "La tache  {{ param }} a été mise à jour",
+            "deleted": "La tache {{ param }} a été supprimée",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Task {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer la tache {{ name }} ?"
             },
             "detail": {
-                "title": "Task"
+                "title": "Taches"
             },
-            "name": "Name",
-            "creationDate": "CreationDate",
-            "lastEditDate": "LastEditDate",
-            "finishDate": "FinishDate",
-            "priority": "Priority",
-            "complexity": "Complexity",
-            "state": "State",
-            "estimatedTime": "EstimatedTime",
+            "name": "Nom",
+            "creationDate": "Date de création",
+            "lastEditDate": "Date de modification",
+            "finishDate": "Date de cloture",
+            "priority": "Priorité",
+            "complexity": "Complexité",
+            "state": "Etat",
+            "estimatedTime": "Durée estimée",
             "description": "Description",
-            "comment": "Comment",
-            "tools": "Tools",
-            "location": "Location",
-            "histories": "Histories",
-            "user": "User"
+            "comment": "Commentaire",
+            "tools": "Fournitures",
+            "location": "Enplacement",
+            "histories": "Historique",
+            "user": "Utilisateur"
         }
     }
 }
