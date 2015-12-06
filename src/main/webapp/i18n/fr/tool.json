@@ -2,25 +2,25 @@
     "myTasksApp": {
         "tool" : {
             "home": {
-                "title": "Tools",
-                "createLabel": "Créer un nouveau Tool",
-                "createOrEditLabel": "Créer ou éditer un Tool"
+                "title": "Founitures",
+                "createLabel": "Créer une nouvelle fourniture",
+                "createOrEditLabel": "Créer ou éditer une fourniture"
             },
-            "created": "Un nouveau Tool a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Tool avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Tool avec l'identifiant {{ param }} a été supprimé",
+            "created": "La fourniture {{ param }} a été créée",
+            "updated": "La fourniture {{ param }} a été mise à jour",
+            "deleted": "La fourniture {{ param }} a été supprimée",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Tool {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer la fourniture {{ name }} ?"
             },
             "detail": {
-                "title": "Tool"
+                "title": "Founiture"
             },
-            "name": "Name",
-            "toBuy": "ToBuy",
-            "price": "Price",
-            "number": "Number",
-            "comment": "Comment",
-            "task": "Task"
+            "name": "Nom",
+            "toBuy": "A acheter",
+            "price": "Prix",
+            "number": "Nombre",
+            "comment": "Commentaire",
+            "task": "Tache"
         }
     }
 }

@@ -15,10 +15,10 @@
             "detail": {
                 "title": "Location"
             },
-            "name": "Name",
-            "outdoor": "Outdoor",
-            "floor": "Floor",
-            "task": "Task"
+            "name": "Nom",
+            "outdoor": "Extérieur",
+            "floor": "Etage",
+            "task": "Tache"
         }
     }
 }

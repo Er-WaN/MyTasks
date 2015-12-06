@@ -244,4 +244,21 @@ Social Buttons
 .bouttons {
 	margin-top: 0px;
 	margin-bottom: 0px;
+	padding : 3px;
+}
+
+.bouttons-td {
+	padding : 3px;
+}
+
+.task-open {
+	background-color : #03a9f4;
+}
+
+.task-pending {
+	background-color : #ff5722;
+}
+
+.task-finished {
+	background-color : #4caf50;
 }

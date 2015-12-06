@@ -2,25 +2,24 @@
     "myTasksApp": {
         "taskHistory" : {
             "home": {
-                "title": "TaskHistorys",
-                "createLabel": "Créer un nouveau TaskHistory",
-                "createOrEditLabel": "Créer ou éditer un TaskHistory"
+                "title": "Historique d'une tache",
+                "createLabel": "Créer une nouvelle entrée Historique",
+                "createOrEditLabel": "Créer ou éditer une entrée Historique"
             },
-            "created": "Un nouveau TaskHistory a été créé avec l'identifiant {{ param }}",
-            "updated": "Le TaskHistory avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le TaskHistory avec l'identifiant {{ param }} a été supprimé",
+            "created": "A new TaskHistory is created with identifier {{ param }}",
+            "updated": "A TaskHistory is updated with identifier {{ param }}",
+            "deleted": "A TaskHistory is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le TaskHistory {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer cet historique ?"
             },
             "detail": {
-                "title": "TaskHistory"
+                "title": "Historique"
             },
             "action": "Action",
             "date": "Date",
-            "comment": "Comment",
-            "spentTime": "SpentTime",
-            "task": "Task"
+            "comment": "Commentaire",
+            "spentTime": "Temps passé",
+            "task": "Tache"
         }
     }
 }
-

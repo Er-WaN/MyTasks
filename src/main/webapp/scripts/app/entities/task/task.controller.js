@@ -32,4 +32,12 @@ angular.module('myTasksApp')
                 id: null
             };
         };
+        $scope.classTaskState = function(state){
+            if(state == "OPEN")
+               return "task-open"
+            else if(state == "PENDING")
+                return "task-pending";
+            else if(state == "FINISHED")
+                return "task-finished";
+       };
     });

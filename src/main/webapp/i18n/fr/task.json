@@ -16,8 +16,8 @@
                 "title": "Taches"
             },
             "name": "Nom",
-            "creationDate": "Date de création",
-            "lastEditDate": "Date de modification",
+            "creationDate": "Création",
+            "lastEditDate": "Modification",
             "finishDate": "Date de cloture",
             "priority": "Priorité",
             "complexity": "Complexité",
@@ -28,7 +28,8 @@
             "tools": "Fournitures",
             "location": "Enplacement",
             "histories": "Historique",
-            "user": "Utilisateur"
+            "user": "Utilisateur",
+            "progression": "Progression"
         }
     }
 }

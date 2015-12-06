@@ -16,11 +16,10 @@
             <thead>
                 <tr>
                     <th><span translate="myTasksApp.task.name">Name</span></th>
+                    <th><span translate="myTasksApp.task.progression">Progression</span></th>
                     <th><span translate="myTasksApp.task.creationDate">CreationDate</span></th>
                     <th><span translate="myTasksApp.task.priority">Priority</span></th>
                     <th><span translate="myTasksApp.task.complexity">Complexity</span></th>
-                    <th><span translate="myTasksApp.task.state">State</span></th>
-                    <th><span translate="myTasksApp.task.estimatedTime">EstimatedTime</span></th>
                     <th><span translate="myTasksApp.task.description">Description</span></th>
                     <th><span translate="myTasksApp.task.location">location</span></th>
                     <th></th>
@@ -28,17 +27,16 @@
             </thead>
             <tbody>
                 <tr ng-repeat="task in tasks track by task.id">
-                    <td><a ui-sref="task.detail({id:task.id})">{{task.name}}</a></td>
+                    <td ng-class='classTaskState(task.state)'><a ui-sref="task.detail({id:task.id})">{{task.name}}</a></td>
                     <td>{{task.creationDate | date:'mediumDate'}}</td>
                     <td translate="{{'myTasksApp.TaskPriority.' + task.priority}}">{{task.priority}}</td>
                     <td translate="{{'myTasksApp.TaskComplexity.' + task.complexity}}">{{task.complexity}}</td>
-                    <td translate="{{'myTasksApp.TaskState.' + task.state}}">{{task.state}}</td>
                     <td>{{task.estimatedTime}}</td>
                     <td>{{task.description}}</td>
                     <td>
                         <a ui-sref="location.detail({id:task.locationId})">{{task.locationName}}</a>
                     </td>
-                    <td>
+                    <td class="bouttons-td" style="padding: 0px;"">
                     	<div class="btn-group m-n bouttons">
 	                        <button type="submit" tooltip="{{'entity.action.view' | translate}}"
 	                                ui-sref="task.detail({id:task.id})" class="btn btn-sm btn-info btn-raised btn-detail">
