@@ -1,0 +1,12 @@
+{
+    "myTasksApp": {
+        "TaskState" : {
+            "null": "",
+            "OPEN": "Ouverte",
+            "PENDING": "En cours",
+            "PAUSED": "En pause",
+            "FINISHED": "Terminée",
+            "CLOSED": "Fermée"
+        }
+    }
+}

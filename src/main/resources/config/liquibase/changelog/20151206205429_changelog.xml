@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="erwan (generated)" id="1449435287480-1">
+      <addColumn tableName="task">
+         <column name="progression" type="int4"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-2">
+      <dropSequence sequenceName="jhi_persistent_audit_event_event_id_seq"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-3">
+      <dropSequence sequenceName="jhi_social_user_connection_id_seq"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-4">
+      <dropSequence sequenceName="jhi_user_id_seq"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-5">
+      <dropSequence sequenceName="location_id_seq"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-6">
+      <dropSequence sequenceName="task_history_id_seq"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-7">
+      <dropSequence sequenceName="task_id_seq"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-8">
+      <dropSequence sequenceName="tool_id_seq"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-9">
+      <dropUniqueConstraint constraintName="jhi_social_user_connection_user_id_provider_id_provider_use_key"
+                            tableName="jhi_social_user_connection"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-10">
+      <dropUniqueConstraint constraintName="jhi_social_user_connection_user_id_provider_id_rank_key"
+                            tableName="jhi_social_user_connection"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-11">
+      <dropColumn columnName="estimated_time" tableName="task"/>
+   </changeSet>
+   <changeSet author="erwan (generated)" id="1449435287480-12">
+      <dropColumn columnName="spent_time" tableName="task_history"/>
+   </changeSet>
+</databaseChangeLog>

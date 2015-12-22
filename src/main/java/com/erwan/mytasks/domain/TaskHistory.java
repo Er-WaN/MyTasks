@@ -34,9 +34,6 @@ public class TaskHistory implements Serializable {
     @Column(name = "comment")
     private String comment;
 
-    @Column(name = "spent_time")
-    private Integer spentTime;
-
     @ManyToOne
     @JoinColumn(name = "task_id")
     private Task task;
@@ -74,14 +71,6 @@ public class TaskHistory implements Serializable {
         this.comment = comment;
     }
 
-    public Integer getSpentTime() {
-        return spentTime;
-    }
-
-    public void setSpentTime(Integer spentTime) {
-        this.spentTime = spentTime;
-    }
-
     public Task getTask() {
         return task;
     }
@@ -114,7 +103,6 @@ public class TaskHistory implements Serializable {
             ", action='" + action + "'" +
             ", date='" + date + "'" +
             ", comment='" + comment + "'" +
-            ", spentTime='" + spentTime + "'" +
             '}';
     }
 }

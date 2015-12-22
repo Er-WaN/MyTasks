@@ -21,8 +21,6 @@ public class TaskHistoryDTO implements Serializable {
 
     private String comment;
 
-    private Integer spentTime;
-
     private Long taskId;
     public Long getId() {
         return id;
@@ -54,14 +52,6 @@ public class TaskHistoryDTO implements Serializable {
 
     public void setComment(String comment) {
         this.comment = comment;
-    }
-
-    public Integer getSpentTime() {
-        return spentTime;
-    }
-
-    public void setSpentTime(Integer spentTime) {
-        this.spentTime = spentTime;
     }
 
     public Long getTaskId() {
@@ -99,7 +89,6 @@ public class TaskHistoryDTO implements Serializable {
             ", action='" + action + "'" +
             ", date='" + date + "'" +
             ", comment='" + comment + "'" +
-            ", spentTime='" + spentTime + "'" +
             '}';
     }
 }

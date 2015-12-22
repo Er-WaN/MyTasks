@@ -2,6 +2,7 @@
 
 angular.module('myTasksApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate', 
     'ngResource', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload',
+    // jhipster-needle-angularjs-add-module JHipster will add new module
     'ui.bootstrap', 'ui.router',  'infinite-scroll', 'angular-loading-bar'])
 
     .run(function ($rootScope, $location, $window, $http, $state, $translate, Language, Auth, Principal, ENV, VERSION) {
@@ -118,9 +119,8 @@ angular.module('myTasksApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascal
         tmhDynamicLocaleProvider.useCookieStorage();
         tmhDynamicLocaleProvider.storageKey('NG_TRANSLATE_LANG_KEY');
         
-        $.material.init();
-        
     })
+    // jhipster-needle-angularjs-add-config JHipster will add new application configuration
     .config(['$urlMatcherFactoryProvider', function($urlMatcherFactory) {
         $urlMatcherFactory.type('boolean', {
             name : 'boolean',
@@ -130,4 +130,4 @@ angular.module('myTasksApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascal
             is: function(val) { return [true,false,0,1].indexOf(val) >= 0 },
             pattern: /bool|true|0|1/
         });
-    }]);;
+    }]);

@@ -31,7 +31,7 @@ public class TaskDTO implements Serializable {
 
     private TaskState state;
 
-    private Integer estimatedTime;
+    private Integer progression;
 
     private String description;
 
@@ -106,12 +106,12 @@ public class TaskDTO implements Serializable {
         this.state = state;
     }
 
-    public Integer getEstimatedTime() {
-        return estimatedTime;
+    public Integer getProgression() {
+        return progression;
     }
 
-    public void setEstimatedTime(Integer estimatedTime) {
-        this.estimatedTime = estimatedTime;
+    public void setProgression(Integer progression) {
+        this.progression = progression;
     }
 
     public String getDescription() {
@@ -185,7 +185,7 @@ public class TaskDTO implements Serializable {
             ", priority='" + priority + "'" +
             ", complexity='" + complexity + "'" +
             ", state='" + state + "'" +
-            ", estimatedTime='" + estimatedTime + "'" +
+            ", progression='" + progression + "'" +
             ", description='" + description + "'" +
             ", comment='" + comment + "'" +
             '}';

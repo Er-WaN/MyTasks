@@ -53,8 +53,8 @@ public class Task implements Serializable {
     @Column(name = "state")
     private TaskState state;
 
-    @Column(name = "estimated_time")
-    private Integer estimatedTime;
+    @Column(name = "progression")
+    private Integer progression;
 
     @Column(name = "description")
     private String description;
@@ -145,12 +145,12 @@ public class Task implements Serializable {
         this.state = state;
     }
 
-    public Integer getEstimatedTime() {
-        return estimatedTime;
+    public Integer getProgression() {
+        return progression;
     }
 
-    public void setEstimatedTime(Integer estimatedTime) {
-        this.estimatedTime = estimatedTime;
+    public void setProgression(Integer progression) {
+        this.progression = progression;
     }
 
     public String getDescription() {
@@ -229,7 +229,7 @@ public class Task implements Serializable {
             ", priority='" + priority + "'" +
             ", complexity='" + complexity + "'" +
             ", state='" + state + "'" +
-            ", estimatedTime='" + estimatedTime + "'" +
+            ", progression='" + progression + "'" +
             ", description='" + description + "'" +
             ", comment='" + comment + "'" +
             '}';

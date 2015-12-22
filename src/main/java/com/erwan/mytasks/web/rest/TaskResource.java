@@ -2,6 +2,7 @@ package com.erwan.mytasks.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import com.erwan.mytasks.domain.Task;
+import com.erwan.mytasks.domain.enumeration.TaskState;
 import com.erwan.mytasks.repository.TaskRepository;
 import com.erwan.mytasks.web.rest.util.HeaderUtil;
 import com.erwan.mytasks.web.rest.dto.TaskDTO;
@@ -51,6 +52,7 @@ public class TaskResource {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("task", "idexists", "A new task cannot already have an ID")).body(null);
         }
         Task task = taskMapper.taskDTOToTask(taskDTO);
+        task.setState(TaskState.OPEN);
         task = taskRepository.save(task);
         TaskDTO result = taskMapper.taskToTaskDTO(task);
         return ResponseEntity.created(new URI("/api/tasks/" + result.getId()))

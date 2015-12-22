@@ -26,12 +26,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="task in tasks track by task.id">
-                    <td ng-class='classTaskState(task.state)'><a ui-sref="task.detail({id:task.id})">{{task.name}}</a></td>
+                <tr ng-repeat="task in tasks track by task.id" ng-class='classTaskState(task.state)'>
+                    <td><a ui-sref="task.detail({id:task.id})">{{task.name}}</a></td>
+                    <td>
+						<div class="progress progress-lg" ng-show="task.progression">
+							<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{{task.progression}}" aria-valuemin="0" aria-valuemax="100" style="width: {{task.progression}}%"></div></div>
+						</div>
+					</td>
                     <td>{{task.creationDate | date:'mediumDate'}}</td>
                     <td translate="{{'myTasksApp.TaskPriority.' + task.priority}}">{{task.priority}}</td>
                     <td translate="{{'myTasksApp.TaskComplexity.' + task.complexity}}">{{task.complexity}}</td>
-                    <td>{{task.estimatedTime}}</td>
                     <td>{{task.description}}</td>
                     <td>
                         <a ui-sref="location.detail({id:task.locationId})">{{task.locationName}}</a>

@@ -56,9 +56,6 @@ public class TaskHistoryResourceIntTest {
     private static final String DEFAULT_COMMENT = "AAAAA";
     private static final String UPDATED_COMMENT = "BBBBB";
 
-    private static final Integer DEFAULT_SPENT_TIME = 1;
-    private static final Integer UPDATED_SPENT_TIME = 2;
-
     @Inject
     private TaskHistoryRepository taskHistoryRepository;
 
@@ -92,7 +89,6 @@ public class TaskHistoryResourceIntTest {
         taskHistory.setAction(DEFAULT_ACTION);
         taskHistory.setDate(DEFAULT_DATE);
         taskHistory.setComment(DEFAULT_COMMENT);
-        taskHistory.setSpentTime(DEFAULT_SPENT_TIME);
     }
 
     @Test
@@ -115,7 +111,6 @@ public class TaskHistoryResourceIntTest {
         assertThat(testTaskHistory.getAction()).isEqualTo(DEFAULT_ACTION);
         assertThat(testTaskHistory.getDate()).isEqualTo(DEFAULT_DATE);
         assertThat(testTaskHistory.getComment()).isEqualTo(DEFAULT_COMMENT);
-        assertThat(testTaskHistory.getSpentTime()).isEqualTo(DEFAULT_SPENT_TIME);
     }
 
     @Test
@@ -131,8 +126,7 @@ public class TaskHistoryResourceIntTest {
                 .andExpect(jsonPath("$.[*].id").value(hasItem(taskHistory.getId().intValue())))
                 .andExpect(jsonPath("$.[*].action").value(hasItem(DEFAULT_ACTION.toString())))
                 .andExpect(jsonPath("$.[*].date").value(hasItem(DEFAULT_DATE.toString())))
-                .andExpect(jsonPath("$.[*].comment").value(hasItem(DEFAULT_COMMENT.toString())))
-                .andExpect(jsonPath("$.[*].spentTime").value(hasItem(DEFAULT_SPENT_TIME)));
+                .andExpect(jsonPath("$.[*].comment").value(hasItem(DEFAULT_COMMENT.toString())));
     }
 
     @Test
@@ -147,9 +141,7 @@ public class TaskHistoryResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(taskHistory.getId().intValue()))
             .andExpect(jsonPath("$.action").value(DEFAULT_ACTION.toString()))
-            .andExpect(jsonPath("$.date").value(DEFAULT_DATE.toString()))
-            .andExpect(jsonPath("$.comment").value(DEFAULT_COMMENT.toString()))
-            .andExpect(jsonPath("$.spentTime").value(DEFAULT_SPENT_TIME));
+            .andExpect(jsonPath("$.date").value(DEFAULT_DATE.toString()));
     }
 
     @Test
@@ -172,7 +164,6 @@ public class TaskHistoryResourceIntTest {
         taskHistory.setAction(UPDATED_ACTION);
         taskHistory.setDate(UPDATED_DATE);
         taskHistory.setComment(UPDATED_COMMENT);
-        taskHistory.setSpentTime(UPDATED_SPENT_TIME);
         TaskHistoryDTO taskHistoryDTO = taskHistoryMapper.taskHistoryToTaskHistoryDTO(taskHistory);
 
         restTaskHistoryMockMvc.perform(put("/api/taskHistorys")
@@ -187,7 +178,6 @@ public class TaskHistoryResourceIntTest {
         assertThat(testTaskHistory.getAction()).isEqualTo(UPDATED_ACTION);
         assertThat(testTaskHistory.getDate()).isEqualTo(UPDATED_DATE);
         assertThat(testTaskHistory.getComment()).isEqualTo(UPDATED_COMMENT);
-        assertThat(testTaskHistory.getSpentTime()).isEqualTo(UPDATED_SPENT_TIME);
     }
 
     @Test

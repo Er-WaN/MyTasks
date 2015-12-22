@@ -72,8 +72,8 @@ public class TaskResourceIntTest {
     private static final TaskState DEFAULT_STATE = TaskState.OPEN;
     private static final TaskState UPDATED_STATE = TaskState.PENDING;
 
-    private static final Integer DEFAULT_ESTIMATED_TIME = 1;
-    private static final Integer UPDATED_ESTIMATED_TIME = 2;
+    private static final Integer DEFAULT_PROGRESSION = 1;
+    private static final Integer UPDATED_PROGRESSION = 2;
     private static final String DEFAULT_DESCRIPTION = "AAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBB";
     private static final String DEFAULT_COMMENT = "AAAAA";
@@ -116,7 +116,7 @@ public class TaskResourceIntTest {
         task.setPriority(DEFAULT_PRIORITY);
         task.setComplexity(DEFAULT_COMPLEXITY);
         task.setState(DEFAULT_STATE);
-        task.setEstimatedTime(DEFAULT_ESTIMATED_TIME);
+        task.setProgression(DEFAULT_PROGRESSION);
         task.setDescription(DEFAULT_DESCRIPTION);
         task.setComment(DEFAULT_COMMENT);
     }
@@ -145,7 +145,7 @@ public class TaskResourceIntTest {
         assertThat(testTask.getPriority()).isEqualTo(DEFAULT_PRIORITY);
         assertThat(testTask.getComplexity()).isEqualTo(DEFAULT_COMPLEXITY);
         assertThat(testTask.getState()).isEqualTo(DEFAULT_STATE);
-        assertThat(testTask.getEstimatedTime()).isEqualTo(DEFAULT_ESTIMATED_TIME);
+        assertThat(testTask.getProgression()).isEqualTo(DEFAULT_PROGRESSION);
         assertThat(testTask.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
         assertThat(testTask.getComment()).isEqualTo(DEFAULT_COMMENT);
     }
@@ -168,7 +168,7 @@ public class TaskResourceIntTest {
                 .andExpect(jsonPath("$.[*].priority").value(hasItem(DEFAULT_PRIORITY.toString())))
                 .andExpect(jsonPath("$.[*].complexity").value(hasItem(DEFAULT_COMPLEXITY.toString())))
                 .andExpect(jsonPath("$.[*].state").value(hasItem(DEFAULT_STATE.toString())))
-                .andExpect(jsonPath("$.[*].estimatedTime").value(hasItem(DEFAULT_ESTIMATED_TIME)))
+                .andExpect(jsonPath("$.[*].estimatedTime").value(hasItem(DEFAULT_PROGRESSION)))
                 .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
                 .andExpect(jsonPath("$.[*].comment").value(hasItem(DEFAULT_COMMENT.toString())));
     }
@@ -191,7 +191,7 @@ public class TaskResourceIntTest {
             .andExpect(jsonPath("$.priority").value(DEFAULT_PRIORITY.toString()))
             .andExpect(jsonPath("$.complexity").value(DEFAULT_COMPLEXITY.toString()))
             .andExpect(jsonPath("$.state").value(DEFAULT_STATE.toString()))
-            .andExpect(jsonPath("$.estimatedTime").value(DEFAULT_ESTIMATED_TIME))
+            .andExpect(jsonPath("$.estimatedTime").value(DEFAULT_PROGRESSION))
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
             .andExpect(jsonPath("$.comment").value(DEFAULT_COMMENT.toString()));
     }
@@ -220,7 +220,7 @@ public class TaskResourceIntTest {
         task.setPriority(UPDATED_PRIORITY);
         task.setComplexity(UPDATED_COMPLEXITY);
         task.setState(UPDATED_STATE);
-        task.setEstimatedTime(UPDATED_ESTIMATED_TIME);
+        task.setProgression(UPDATED_PROGRESSION);
         task.setDescription(UPDATED_DESCRIPTION);
         task.setComment(UPDATED_COMMENT);
         TaskDTO taskDTO = taskMapper.taskToTaskDTO(task);
@@ -241,7 +241,7 @@ public class TaskResourceIntTest {
         assertThat(testTask.getPriority()).isEqualTo(UPDATED_PRIORITY);
         assertThat(testTask.getComplexity()).isEqualTo(UPDATED_COMPLEXITY);
         assertThat(testTask.getState()).isEqualTo(UPDATED_STATE);
-        assertThat(testTask.getEstimatedTime()).isEqualTo(UPDATED_ESTIMATED_TIME);
+        assertThat(testTask.getProgression()).isEqualTo(UPDATED_PROGRESSION);
         assertThat(testTask.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
         assertThat(testTask.getComment()).isEqualTo(UPDATED_COMMENT);
     }

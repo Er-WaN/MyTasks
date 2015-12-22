@@ -1,0 +1,10 @@
+{
+    "myTasksApp": {
+        "TaskPriority" : {
+            "null": "",
+            "LOW": "Petit",
+            "MEDIUM": "Moyenne",
+            "HIGH": "Haute"
+        }
+    }
+}
